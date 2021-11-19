@@ -33,29 +33,25 @@ function addTask(name, status = '', priority = '') {
 function showBy(value) {
   if (value == 'status') {
     console.log('To Do:')
-    searchStatus('To Do')
+    search('To Do')
     console.log('In Progress:')
-    searchStatus('In Progress')
+    search('In Progress')
     console.log('Done:')
-    searchStatus('Done')
+    search('Done')
   }
   if (value == 'priority') {
     console.log('high:')
-    searchPriority('high')
+    search('high')
     console.log('low:')
-    searchPriority('low')
+    search('low')
   }
 };
-function searchStatus(status) {
+function search(value) {
   list.forEach(element => {
-    if (element.status == status) {
+    if (element.status == value) {
       console.log(element)
     }
-  })
-}
-function searchPriority(priority) {
-  list.forEach(element => {
-    if (element.priority == priority) {
+    if (element.priority == value) {
       console.log(element)
     }
   })
@@ -66,3 +62,4 @@ deleteTask("make a bad")
 addTask("have a walk", "To Do", "high")
 addTask("game", "To Do", "high")
 showBy('priority')
+showBy('status')
