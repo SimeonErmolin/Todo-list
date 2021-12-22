@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>To Do</title>
 </head>
+
 <body>
-  <script src="app.js"></script>
+
+  <div class="todo">
+    <div class="high">
+      <h2 class="title">HIGH</h2>
+      <form class="high-input">
+        <input type="text" placeholder="Добавить важных дел" class="field">
+        <input type="submit" class="btn" value="">
+      </form>
+      <div class="wrapper">
+
+      </div>
+    </div>
+
+    <div class="low">
+      <h2 class="title">LOW</h2>
+        <form class="low-input">
+          <input type="text" placeholder="Добавить" class="field">
+          <input type="submit" class="btn" value="">
+        </form>
+        <div class="wrapper">
+
+        </div>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
 </body>
+
 </html>
